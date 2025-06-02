@@ -1,0 +1,10 @@
+<% if resource.errors.any? %>
+  <div class="alert alert-danger">
+    <h4 class="alert-heading">The following errors prevented the <%= resource.class.name.downcase %> from being saved:</h4>
+    <ul>
+      <% resource.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
